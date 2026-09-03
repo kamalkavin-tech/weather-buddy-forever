@@ -13,7 +13,7 @@ export const mockWeatherService: WeatherService = {
   },
 
   async getWeather(cityId: string): Promise<WeatherSnapshot> {
-    const seed = MOCK_CITIES.find((c) => c.id === cityId) ?? MOCK_CITIES[0];
+    const seed = MOCK_CITIES.find((c) => c.id === cityId) ?? MOCK_CITIES[0]!;
     return buildMockSnapshot(seed);
   },
 };

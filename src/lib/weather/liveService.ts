@@ -34,7 +34,7 @@ export function createLiveWeatherService(apiKey: string): WeatherService {
     },
 
     async getWeather(cityId: string): Promise<WeatherSnapshot> {
-      const seed = MOCK_CITIES.find((c) => c.id === cityId) ?? MOCK_CITIES[0];
+      const seed = MOCK_CITIES.find((c) => c.id === cityId) ?? MOCK_CITIES[0]!;
       const q = `${seed.name},${seed.country}`;
       const base = "https://api.openweathermap.org/data/2.5";
 
